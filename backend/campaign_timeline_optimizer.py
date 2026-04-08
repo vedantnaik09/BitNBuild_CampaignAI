@@ -174,7 +174,7 @@ def create_timeline_optimizer_agent() -> Agent:
     """Create the timeline optimization agent"""
     
     return Agent(
-        model=Gemini(id="gemini-3-flash-preview"),
+        model=Gemini(id="gemini-3.1-flash-lite-preview"),
         tools=[WebSearchTools()],
         description="Expert campaign timeline optimizer specializing in strategic scheduling and audience engagement maximization",
         instructions=[

@@ -22,7 +22,7 @@ def calculate_start_date(days: int) -> str:
 
 
 agent = Agent(
-    model=Gemini(id="gemini-3-flash-preview"),
+    model=Gemini(id="gemini-3.1-flash-lite-preview"),
     tools=[
         ExaTools(start_published_date=calculate_start_date(30), type="keyword"),
         FirecrawlTools(scrape=True),

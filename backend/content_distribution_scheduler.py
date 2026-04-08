@@ -267,7 +267,7 @@ def create_distribution_scheduler_agent() -> Agent:
     """Create the content distribution scheduler agent"""
     
     return Agent(
-        model=Gemini(id="gemini-3-flash-preview"),
+        model=Gemini(id="gemini-3.1-flash-lite-preview"),
         tools=[WebSearchTools()],
         description="Expert content distribution scheduler specializing in detailed posting schedules and platform optimization",
         instructions=[

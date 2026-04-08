@@ -429,7 +429,7 @@ async def lifespan(app: FastAPI):
     global agent
     try:
         agent = Agent(
-            model=Gemini(id="gemini-3-flash-preview"),
+            model=Gemini(id="gemini-3.1-flash-lite-preview"),
             tools=[
                 ExaTools(start_published_date=calculate_start_date(30), type="keyword"),
                 FirecrawlTools(),
@@ -1186,7 +1186,7 @@ async def get_agent_config():
         raise HTTPException(status_code=503, detail="Agent not initialized")
     
     return {
-        "model": "gemini-3-flash-preview",
+        "model": "gemini-3.1-flash-lite-preview",
         "tools": ["ExaTools", "FirecrawlTools"],
         "research_period_days": 30,
         "capabilities": [
