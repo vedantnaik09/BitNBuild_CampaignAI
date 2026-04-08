@@ -17,7 +17,7 @@ from typing import Dict, List, Any, Optional
 from pydantic import BaseModel, Field
 from agno.agent import Agent
 from agno.models.google import Gemini
-from agno.tools.googlesearch import GoogleSearchTools
+from agno.tools.websearch import WebSearchTools
 import os
 from dotenv import load_dotenv
 import random
@@ -267,8 +267,8 @@ def create_distribution_scheduler_agent() -> Agent:
     """Create the content distribution scheduler agent"""
     
     return Agent(
-        model=Gemini(id="gemini-2.0-flash"),
-        tools=[GoogleSearchTools()],
+        model=Gemini(id="gemini-3-flash-preview"),
+        tools=[WebSearchTools()],
         description="Expert content distribution scheduler specializing in detailed posting schedules and platform optimization",
         instructions=[
             "You are an expert content distribution scheduler. Your role is to:",

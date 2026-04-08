@@ -17,7 +17,7 @@ from typing import Dict, List, Any, Optional
 from pydantic import BaseModel, Field
 from agno.agent import Agent
 from agno.models.google import Gemini
-from agno.tools.googlesearch import GoogleSearchTools
+from agno.tools.websearch import WebSearchTools
 import os
 from dotenv import load_dotenv
 import calendar
@@ -174,8 +174,8 @@ def create_timeline_optimizer_agent() -> Agent:
     """Create the timeline optimization agent"""
     
     return Agent(
-        model=Gemini(id="gemini-2.0-flash"),
-        tools=[GoogleSearchTools()],
+        model=Gemini(id="gemini-3-flash-preview"),
+        tools=[WebSearchTools()],
         description="Expert campaign timeline optimizer specializing in strategic scheduling and audience engagement maximization",
         instructions=[
             "You are an expert campaign timeline optimizer. Your role is to:",

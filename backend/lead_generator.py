@@ -1,5 +1,5 @@
 from agno.agent import Agent
-from agno.tools.googlesearch import GoogleSearchTools
+from agno.tools.websearch import WebSearchTools
 from agno.models.google import Gemini
 from pydantic import BaseModel
 from typing import List, Dict, Optional, Any
@@ -34,8 +34,8 @@ def find_collaborators(
     """
     
     agent = Agent(
-        model=Gemini(id="gemini-2.0-flash"),
-        tools=[GoogleSearchTools()],
+        model=Gemini(id="gemini-3-flash-preview"),
+        tools=[WebSearchTools()],
         description="Find collaborators, celebrities, and influencers for social media campaigns.",
         instructions=[
             "Find potential collaborators, celebrities, or influencers for social media campaigns.",

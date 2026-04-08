@@ -17,7 +17,7 @@ from typing import Dict, List, Any, Optional
 from pydantic import BaseModel, Field
 from agno.agent import Agent
 from agno.models.google import Gemini
-from agno.tools.googlesearch import GoogleSearchTools
+from agno.tools.websearch import WebSearchTools
 import os
 from dotenv import load_dotenv
 import random
@@ -266,8 +266,8 @@ def create_outreach_call_scheduler_agent() -> Agent:
     """Create the outreach call scheduler agent"""
     
     return Agent(
-        model=Gemini(id="gemini-2.0-flash"),
-        tools=[GoogleSearchTools()],
+        model=Gemini(id="gemini-3-flash-preview"),
+        tools=[WebSearchTools()],
         description="Expert outreach call scheduler specializing in sales call optimization and lead prioritization",
         instructions=[
             "You are an expert outreach call scheduler. Your role is to:",
