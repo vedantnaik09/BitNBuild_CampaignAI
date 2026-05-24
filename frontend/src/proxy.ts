@@ -92,7 +92,7 @@ export function proxy(request: NextRequest, event: NextFetchEvent) {
   const payload = buildVisitorDetails({
     visitorId,
     method: request.method,
-    path: request.url,
+    path: requestUrl.pathname,
     queryString: requestUrl.search || null,
     referrer: request.headers.get("referer"),
     userAgent: request.headers.get("user-agent"),

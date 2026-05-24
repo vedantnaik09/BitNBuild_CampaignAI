@@ -60,9 +60,9 @@ async function ensureSchema() {
     }
 
     schemaReady = (async () => {
-      await sql.query(VISIT_TABLE_SQL);
+      await sql(VISIT_TABLE_SQL);
       for (const indexSql of VISIT_INDEX_SQLS) {
-        await sql.query(indexSql);
+        await sql(indexSql);
       }
     })();
   }
