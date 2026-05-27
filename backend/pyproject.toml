@@ -76,5 +76,27 @@ dependencies = [
 	"yarl",
 ]
 
+[tool.setuptools]
+py-modules = [
+	"audience_intelligence_analyzer",
+	"call",
+	"campaign_timeline_optimizer",
+	"content_distribution_scheduler",
+	"copy_content_generator",
+	"demo_image_mapping",
+	"email_agent",
+	"email_sender",
+	"email_sender_sendgrid",
+	"fastapi_market_agent",
+	"fastapi_market_agent_new",
+	"fastapi_market_agent_old",
+	"image",
+	"lead_generator",
+	"market_analysis_agent",
+	"outreach_call_scheduler",
+	"run_server",
+	"test_email_config",
+]
+
 [tool.vercel]
 entrypoint = "fastapi_market_agent:app"
