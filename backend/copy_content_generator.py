@@ -64,7 +64,7 @@ class ContentOutput(BaseModel):
 
 # Create a single agent that combines web search and content generation
 post_team = Agent(
-    model=Gemini(id="gemini-3.1-flash-lite-preview"),
+    model=Gemini(id="gemini-3.1-flash-lite"),
     tools=[WebSearchTools()],
     description="Expert content creator and web researcher specializing in marketing copy generation",
     instructions=[

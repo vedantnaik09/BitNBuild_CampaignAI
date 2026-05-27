@@ -99,7 +99,7 @@ def analyze_audience_intelligence(request: AudienceIntelligenceRequest) -> Audie
     try:
         # Initialize agent for research
         agent = Agent(
-            model=Gemini(id="gemini-3.1-flash-lite-preview"),
+            model=Gemini(id="gemini-3.1-flash-lite"),
             tools=[
                 ExaTools(start_published_date="2024-01-01", type="keyword"),
                 FirecrawlTools(),

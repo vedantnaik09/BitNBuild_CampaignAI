@@ -266,7 +266,7 @@ def create_outreach_call_scheduler_agent() -> Agent:
     """Create the outreach call scheduler agent"""
     
     return Agent(
-        model=Gemini(id="gemini-3.1-flash-lite-preview"),
+        model=Gemini(id="gemini-3.1-flash-lite"),
         tools=[WebSearchTools()],
         description="Expert outreach call scheduler specializing in sales call optimization and lead prioritization",
         instructions=[

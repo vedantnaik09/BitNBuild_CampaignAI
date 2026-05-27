@@ -34,7 +34,7 @@ def find_collaborators(
     """
     
     agent = Agent(
-        model=Gemini(id="gemini-3.1-flash-lite-preview"),
+        model=Gemini(id="gemini-3.1-flash-lite"),
         tools=[WebSearchTools()],
         description="Find collaborators, celebrities, and influencers for social media campaigns.",
         instructions=[
